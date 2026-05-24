@@ -1,33 +1,20 @@
 {
   "name": "construction-system-pro",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "description": "Professional RFP Analysis & Construction Project Management System",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "build-android": "eas build --platform android",
-    "build-ios": "eas build --platform ios"
+    "build": "cordova build android --release",
+    "clean": "cordova clean"
+  },
+  "cordova": {
+    "platforms": ["android"],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
   },
   "dependencies": {
-    "expo": "^51.0.0",
-    "expo-status-bar": "^1.12.0",
-    "react": "18.3.1",
-    "react-native": "0.75.0",
-    "@react-navigation/native": "^6.1.15",
-    "@react-navigation/bottom-tabs": "^6.5.20",
-    "react-native-screens": "^3.31.0",
-    "react-native-safe-area-context": "^4.10.0",
-    "react-native-gesture-handler": "^2.20.0",
-    "@react-native-async-storage/async-storage": "^1.23.0",
-    "expo-file-system": "^17.0.0",
-    "expo-sharing": "^14.0.0",
-    "react-native-vector-icons": "^10.1.0"
+    "cordova-plugin-whitelist": "^1.3.4"
   },
-  "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@types/react": "^18.3.0"
-  },
-  "private": true
+  "author": "Construction System",
+  "license": "MIT"
 }

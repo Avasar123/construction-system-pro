@@ -1,0 +1,65 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+
+    - name: Install Cordova
+      run: npm install -g cordova
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Add Android platform
+      run: cordova platform add android
+
+    - name: Build APK
+      run: cordova build android --release
+
+    - name: Upload APK to Release
+      uses: actions/upload-artifact@v3
+      with:
+        name: android-apk
+        path: platforms/android/app/build/outputs/apk/release/app-release.apk
+
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v1.0.${{ github.run_number }}
+        release_name: Construction System Pro v1.0
+        body: |
+          APK ready for Google Play upload
+          File: app-release.apk
+        draft: false
+        prerelease: false
+
+    - name: Upload APK to Release Assets
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./platforms/android/app/build/outputs/apk/release/app-release.apk
+        asset_name: construction-system-pro.apk
+        asset_content_type: application/vnd.android.package-archive

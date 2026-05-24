@@ -1,4 +1,6 @@
 node_modules/
+platforms/
+plugins/
 .DS_Store
 *.log
 .env
@@ -16,3 +18,5 @@ android/
 ios/
 *.jks
 *.keystore
+www/lib/
+.cordova/

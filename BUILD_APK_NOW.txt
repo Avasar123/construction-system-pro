@@ -1,0 +1,190 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                  BUILDING ANDROID APK - REAL APP (CORDOVA)                  ║
+║                          Construction System Pro                             ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+WHAT THIS DOES:
+✓ Creates a real Android app (.apk)
+✓ Loads your PWA from Netlify
+✓ Works offline
+✓ Uploadable to Google Play
+✓ Users download and install like any app
+
+═══════════════════════════════════════════════════════════════════════════════
+
+REQUIREMENTS FIRST:
+
+Before running build, you MUST have:
+
+1. JAVA JDK
+   Download: https://www.oracle.com/java/technologies/downloads/
+   Install it
+   Verify: java -version
+
+2. ANDROID SDK
+   Download: https://developer.android.com/studio (Android Studio)
+   Install it
+   This installs Android SDK
+
+═══════════════════════════════════════════════════════════════════════════════
+
+THEN RUN THIS (Copy & Paste Into Command Prompt):
+
+```
+npm install -g cordova
+
+cordova create construction-app com.constructionsystem.rfpanalysis "Construction System Pro"
+
+cd construction-app
+
+cordova platform add android
+
+cordova build android --release
+```
+
+That's it. Takes ~20 minutes.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+YOUR APK WILL BE AT:
+
+construction-app\platforms\android\app\build\outputs\apk\release\app-release.apk
+
+═══════════════════════════════════════════════════════════════════════════════
+
+THEN UPLOAD TO GOOGLE PLAY:
+
+1. Go to: https://play.google.com/apps/publish
+2. Create new app (or use existing)
+3. Upload the .apk file
+4. Fill details
+5. Submit
+6. Done!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+STEP BY STEP DETAILED:
+
+STEP 1: Install Java
+   1. Go to: https://www.oracle.com/java/technologies/downloads/
+   2. Download JDK 21 (latest)
+   3. Install it
+   4. Open Command Prompt
+   5. Type: java -version
+   6. Should show version number
+
+STEP 2: Install Android Studio
+   1. Go to: https://developer.android.com/studio
+   2. Download Android Studio
+   3. Install it
+   4. Follow installation wizard
+   5. This installs Android SDK
+
+STEP 3: Install Cordova
+   Open Command Prompt and type:
+   npm install -g cordova
+
+STEP 4: Create App
+   cordova create construction-app com.constructionsystem.rfpanalysis "Construction System Pro"
+
+STEP 5: Navigate to folder
+   cd construction-app
+
+STEP 6: Add Android Support
+   cordova platform add android
+   (Takes ~5 minutes, first time only)
+
+STEP 7: Build APK
+   cordova build android --release
+   (Takes ~10 minutes)
+
+STEP 8: Find Your APK
+   Go to: construction-app\platforms\android\app\build\outputs\apk\release\
+   Find: app-release.apk
+   This is your Android app!
+
+STEP 9: Rename (Optional)
+   Rename app-release.apk to:
+   construction-system-pro.apk
+
+STEP 10: Upload to Google Play
+   1. https://play.google.com/apps/publish
+   2. Upload the .apk
+   3. Fill app details
+   4. Submit
+   5. Done!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+WHAT'S LOADED IN THE APP?
+
+Your PWA from Netlify:
+https://construction-project-overview.netlify.app
+
+When user opens the app, they see your RFP Analysis system with all features:
+✓ Requirements tab
+✓ Standards database
+✓ Risk assessment
+✓ Reference projects
+✓ Citations
+✓ Works offline
+
+═══════════════════════════════════════════════════════════════════════════════
+
+AFTER APK BUILD:
+
+You'll have:
+✓ Real Android app file (.apk)
+✓ Ready for Play Store
+✓ Users can download and install
+✓ All features work
+✓ Updates when you update PWA
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ERRORS?
+
+"Java not found"
+   → Install Java JDK from oracle.com
+
+"Android SDK not found"
+   → Install Android Studio from developer.android.com
+
+"cordova command not found"
+   → Close Command Prompt
+   → Reopen it
+   → Try again
+
+"Build fails"
+   → Delete construction-app folder
+   → Start from STEP 4 again
+
+═══════════════════════════════════════════════════════════════════════════════
+
+TIMELINE:
+
+Java install:        5 min
+Android Studio:      10 min
+Cordova install:     1 min
+Create project:      2 min
+Add Android:         5 min
+Build APK:           10 min
+Upload to Play:      5 min
+
+TOTAL: ~40 minutes
+
+═══════════════════════════════════════════════════════════════════════════════
+
+READY?
+
+1. Install Java (above)
+2. Install Android Studio (above)
+3. Copy & paste the commands above into Command Prompt
+4. Wait 20 minutes
+5. Get your APK
+6. Upload to Google Play
+7. App is live!
+
+═══════════════════════════════════════════════════════════════════════════════

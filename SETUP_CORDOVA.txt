@@ -1,0 +1,191 @@
+═══════════════════════════════════════════════════════════════════════════════
+              BUILDING ANDROID APK WRAPPER - COMPLETE GUIDE
+═══════════════════════════════════════════════════════════════════════════════
+
+This creates a REAL Android app that wraps your PWA.
+
+───────────────────────────────────────────────────────────────────────────────
+QUICK START
+───────────────────────────────────────────────────────────────────────────────
+
+In Command Prompt, run these commands ONE BY ONE:
+
+1. INSTALL CORDOVA
+   npm install -g cordova
+
+2. CREATE PROJECT
+   cordova create construction-app com.constructionsystem.rfpanalysis "Construction System Pro"
+
+3. NAVIGATE TO PROJECT
+   cd construction-app
+
+4. ADD ANDROID
+   cordova platform add android
+
+5. BUILD APK
+   cordova build android --release
+
+That's it. Takes ~20 minutes total.
+
+Your APK will be at:
+   construction-app\platforms\android\app\build\outputs\apk\release\app-release.apk
+
+───────────────────────────────────────────────────────────────────────────────
+IF YOU WANT THE PWA (NOT NATIVE APP)
+───────────────────────────────────────────────────────────────────────────────
+
+Your PWA is already at:
+   https://construction-project-overview.netlify.app
+
+Users can:
+1. Open URL in Chrome
+2. Tap menu → Install app
+3. App on home screen
+4. Works offline
+5. All features work
+
+This is ALREADY a real app. Just install from web.
+
+───────────────────────────────────────────────────────────────────────────────
+WHAT IS CORDOVA WRAPPER?
+───────────────────────────────────────────────────────────────────────────────
+
+Cordova creates a native Android app that:
+✓ Loads your PWA inside
+✓ Acts like a native app
+✓ Can be uploaded to Play Store
+✓ Works offline
+✓ Updates when you update PWA
+
+───────────────────────────────────────────────────────────────────────────────
+AFTER BUILD COMPLETES
+───────────────────────────────────────────────────────────────────────────────
+
+1. Find APK file:
+   construction-app\platforms\android\app\build\outputs\apk\release\app-release.apk
+
+2. Rename to:
+   construction-system-pro.apk
+
+3. Go to Google Play Console:
+   https://play.google.com/apps/publish
+
+4. Upload APK (not AAB for this method)
+
+5. Follow GOOGLE_PLAY_UPLOAD.md steps
+
+───────────────────────────────────────────────────────────────────────────────
+REQUIREMENTS
+───────────────────────────────────────────────────────────────────────────────
+
+✓ Node.js (already have)
+✓ Java Development Kit (JDK)
+  Download: https://www.oracle.com/java/technologies/downloads/
+  Install it
+
+✓ Android SDK
+  Download Android Studio: https://developer.android.com/studio
+  Install it
+  This installs Android SDK automatically
+
+───────────────────────────────────────────────────────────────────────────────
+STEP BY STEP
+───────────────────────────────────────────────────────────────────────────────
+
+STEP 1: Check Java is installed
+   java -version
+   (Should show Java version)
+
+STEP 2: Install Cordova
+   npm install -g cordova
+
+STEP 3: Create Cordova project
+   cordova create construction-app com.constructionsystem.rfpanalysis "Construction System Pro"
+
+STEP 4: Navigate to project
+   cd construction-app
+
+STEP 5: Configure to load PWA
+   [See CONFIG SECTION BELOW]
+
+STEP 6: Add Android platform
+   cordova platform add android
+   (Takes 5 minutes)
+
+STEP 7: Build Android APK
+   cordova build android --release
+   (Takes 10 minutes)
+
+STEP 8: Find your APK
+   construction-app\platforms\android\app\build\outputs\apk\release\app-release.apk
+
+STEP 9: Upload to Google Play
+
+───────────────────────────────────────────────────────────────────────────────
+CONFIG: LOAD YOUR PWA
+───────────────────────────────────────────────────────────────────────────────
+
+After creating the project, edit:
+   construction-app\config.xml
+
+Find this line:
+   <content src="index.html" />
+
+Replace with:
+   <content src="https://construction-project-overview.netlify.app" />
+
+Then save and build.
+
+───────────────────────────────────────────────────────────────────────────────
+TROUBLESHOOTING
+───────────────────────────────────────────────────────────────────────────────
+
+"Java not found"
+   → Install JDK: https://www.oracle.com/java/technologies/downloads/
+
+"Android SDK not found"
+   → Install Android Studio: https://developer.android.com/studio
+
+"Cordova command not found"
+   → npm install -g cordova
+   → Close and reopen Command Prompt
+
+"Build fails with Gradle error"
+   → Delete: construction-app folder
+   → Start over from STEP 2
+
+───────────────────────────────────────────────────────────────────────────────
+TOTAL TIME
+───────────────────────────────────────────────────────────────────────────────
+
+Setup (one-time):      10 minutes
+Create project:        2 minutes
+Add Android:           5 minutes
+Build APK:             10 minutes
+Upload to Play Store:  5 minutes
+
+TOTAL: ~30 minutes
+
+───────────────────────────────────────────────────────────────────────────────
+YOUR RESULT
+───────────────────────────────────────────────────────────────────────────────
+
+✓ Real Android app (.apk file)
+✓ Loads your PWA
+✓ Works offline
+✓ Can be in Play Store
+✓ Users can download and install
+✓ Updates when you update PWA
+
+───────────────────────────────────────────────────────────────────────────────
+READY?
+
+1. Make sure Java is installed (java -version)
+2. Make sure Android SDK is installed (from Android Studio)
+3. Run the commands above
+4. Get your APK
+5. Upload to Google Play
+
+Go!
+
+═══════════════════════════════════════════════════════════════════════════════
