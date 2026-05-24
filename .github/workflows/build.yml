@@ -1,4 +1,4 @@
-name: Build Android APK
+hname: Build Android APK
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
           java-version: '17'
-    distribution: 'adopt'
+            distribution: 'adopt'
     - name: Install Cordova
       run: npm install -g cordova
 
