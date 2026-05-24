@@ -1,35 +1,35 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <widget id="com.constructionsystem.rfpanalysis" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Construction System Pro</name>
-    <description>Professional RFP Analysis & Project Management</description>
-    <author email="support@constructionsystem.com" href="https://construction-project-overview.netlify.app">
-        Construction System
-    </author>
-    <content src="https://construction-project-overview.netlify.app" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-        <preference name="Orientation" value="portrait" />
-        <preference name="BackgroundColor" value="0xffffffff" />
-        <preference name="ShowTitle" value="true" />
-        <preference name="InAppBrowserStorageEnabled" value="true" />
-        <preference name="DisallowOverscroll" value="true" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
-    <preference name="loglevel" value="log" />
-    <preference name="AndroidLaunchMode" value="singleTop" />
-    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
-    <preference name="SuppressesIncrementalRendering" value="false" />
-    <preference name="android-minSdkVersion" value="21" />
-    <preference name="android-targetSdkVersion" value="33" />
-    <preference name="loadUrlTimeoutValue" value="70000" />
+      <name>Construction System Pro</name>
+      <description>Professional RFP Analysis &amp; Project Management</description>
+      <author email="support@constructionsystem.com" href="https://construction-project-overview.netlify.app">Construction System</author>
+      <content src="https://construction-project-overview.netlify.app" />
+      <access origin="*" />
+      <allow-intent href="http://*/*" />
+      <allow-intent href="https://*/*" />
+      <allow-intent href="tel:*" />
+      <allow-intent href="sms:*" />
+      <allow-intent href="mailto:*" />
+      <allow-intent href="geo:*" />
+      <platform name="android">
+              <allow-intent href="market:*" />
+              <preference name="Orientation" value="portrait" />
+              <preference name="BackgroundColor" value="0xffffffff" />
+              <preference name="ShowTitle" value="true" />
+              <preference name="InAppBrowserStorageEnabled" value="true" />
+              <preference name="DisallowOverscroll" value="true" />
+              <preference name="android-minSdkVersion" value="21" />
+              <preference name="android-targetSdkVersion" value="33" />
+      </platform>
+      <platform name="ios">
+              <allow-intent href="itms:*" />
+              <allow-intent href="itms-apps:*" />
+      </platform>
+      <preference name="loglevel" value="log" />
+      <preference name="AndroidLaunchMode" value="singleTop" />
+      <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+      <preference name="SuppressesIncrementalRendering" value="false" />
+      <preference name="android-minSdkVersion" value="21" />
+      <preference name="android-targetSdkVersion" value="33" />
+      <preference name="loadUrlTimeoutValue" value="70000" />
 </widget>
